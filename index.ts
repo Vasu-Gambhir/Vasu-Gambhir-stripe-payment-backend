@@ -15,6 +15,7 @@ import router from "./routes/routes";
 app.use(express.json());
 app.use(cookieParser(""));
 
+
 app.use(
   cors({
     origin: ["http://localhost:3000", "https://stripe-payment-frontend-psi.vercel.app"],

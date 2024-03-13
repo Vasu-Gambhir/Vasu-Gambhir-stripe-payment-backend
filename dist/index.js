@@ -15,7 +15,7 @@ const routes_1 = __importDefault(require("./routes/routes"));
 app.use(express_1.default.json());
 app.use(cookieParser(""));
 app.use((0, cors_1.default)({
-    origin: ["http://localhost:3000", ""],
+    origin: ["http://localhost:3000", "https://stripe-payment-frontend-psi.vercel.app"],
     credentials: true,
     // exposedHeaders: ["set-cookie"],
 }));
