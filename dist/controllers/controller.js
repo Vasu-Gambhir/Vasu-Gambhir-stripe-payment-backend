@@ -134,8 +134,8 @@ const createCheckoutSession = (req, res) => __awaiter(void 0, void 0, void 0, fu
             },
         ],
         mode: "payment",
-        success_url: "http://localhost:3000?success",
-        cancel_url: "http://localhost:3000?failed",
+        success_url: `${process.env.NODE_ENV === "production" ? "https://stripe-payment-frontend-psi.vercel.app?success" : "http://localhost:3000?success"}`,
+        cancel_url: `${process.env.NODE_ENV === "production" ? "https://stripe-payment-frontend-psi.vercel.app?failed" : "http://localhost:3000?failed"}`,
     });
     return session;
     //   res.json({session });
